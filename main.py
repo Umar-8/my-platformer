@@ -1,6 +1,8 @@
 from settings import *
 from player import Player
 from pytmx.util_pygame import load_pygame
+from sprites import *
+from random import randint
 
 class Game:
     def __init__(self) -> None:
@@ -13,9 +15,14 @@ class Game:
 
         # groups
         self.all_sprites = pygame.sprite.Group()
+        self.collisions_sprites = pygame.sprite.Group()
 
         # sprites
-        self.player = Player((400, 300), self.all_sprites)
+        self.player = Player((400, 300), self.all_sprites, self.collisions_sprites)
+        for i in range(6):
+            x, y = randint(0, WINDOW_WIDTH), randint(0, WINDOW_HEIGHT)
+            w, h = randint(20, 60), randint(40,80)
+            CollisionSprite((x, y), (w, h), (self.all_sprites, self.collisions_sprites))
 
     def run(self):
         while self.running:
