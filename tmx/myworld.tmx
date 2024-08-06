@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="52" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="82">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="52" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="4" nextobjectid="120">
  <tileset firstgid="1" source="../tsx/basic.tsx"/>
  <tileset firstgid="211" source="../tsx/Objects.tsx"/>
  <layer id="1" name="Tile Layer 1" width="52" height="50" offsetx="0" offsety="12">
@@ -111,5 +111,66 @@
   <object id="78" name="grass rock" type="rock" gid="219" x="1770" y="294" width="60" height="60"/>
   <object id="79" name="Pine" type="Tree" gid="214" x="2368" y="2312" width="64" height="128"/>
   <object id="80" name="grass rock" type="rock" gid="219" x="2282" y="2298" width="60" height="60"/>
+ </objectgroup>
+ <objectgroup id="3" name="Collisions">
+  <object id="82" x="1796" y="318" width="58" height="832"/>
+  <object id="83" x="1854" y="1100" width="506" height="62"/>
+  <object id="84" x="2492" y="1102" width="576" height="62"/>
+  <object id="86" x="3016" y="856" width="60" height="236"/>
+  <object id="87" x="3014" y="334" width="44" height="362"/>
+  <object id="88" x="1860" y="320" width="1146" height="26"/>
+  <object id="89" x="1362" y="702" width="58" height="68"/>
+  <object id="90" x="1518" y="704" width="62" height="60"/>
+  <object id="91" x="1414" y="902" width="62" height="54"/>
+  <object id="92" x="836" y="1046" width="58" height="60"/>
+  <object id="93" x="766" y="700" width="60" height="58"/>
+  <object id="94" x="894" y="704" width="64" height="58"/>
+  <object id="95" x="842" y="848" width="120" height="94"/>
+  <object id="96" x="-4" y="8" width="188" height="1612"/>
+  <object id="97" x="0" y="1664" width="184" height="836"/>
+  <object id="98" x="4" y="2928" width="3324" height="288"/>
+  <object id="99" x="2808" y="1344" width="470" height="992"/>
+  <object id="100" x="3122" y="1218" width="152" height="126"/>
+  <object id="101" x="2676" y="1720" width="128" height="488"/>
+  <object id="102" x="2924" y="2336" width="354" height="256"/>
+  <object id="103" x="2066" y="1810" width="486" height="174"/>
+  <object id="104" x="380" y="1514" width="56" height="46"/>
+  <object id="105" x="532" y="560" width="66" height="50"/>
+  <object id="106" x="1536" y="230" width="64" height="56"/>
+  <object id="107" x="3200" y="136" width="120" height="588"/>
+  <object id="108" x="3252" y="728" width="76" height="432"/>
+  <object id="109" name="Player" x="1668" y="1340">
+   <point/>
+  </object>
+  <object id="110" name="Enemy" x="284" y="2456">
+   <point/>
+  </object>
+  <object id="111" name="Enemy" x="584" y="2088">
+   <point/>
+  </object>
+  <object id="112" name="Enemy" x="288" y="948">
+   <point/>
+  </object>
+  <object id="113" name="Enemy" x="464" y="200">
+   <point/>
+  </object>
+  <object id="114" name="Enemy" x="2856" y="2716">
+   <point/>
+  </object>
+  <object id="115" name="Enemy" x="2516" y="2812">
+   <point/>
+  </object>
+  <object id="116" name="Enemy" x="1604" y="2840">
+   <point/>
+  </object>
+  <object id="117" name="Enemy" x="628" y="1744">
+   <point/>
+  </object>
+  <object id="118" name="Enemy" x="2700" y="1584">
+   <point/>
+  </object>
+  <object id="119" name="Enemy" x="2668" y="1312">
+   <point/>
+  </object>
  </objectgroup>
 </map>
