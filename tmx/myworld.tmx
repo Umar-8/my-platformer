@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="52" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="52" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="82">
  <tileset firstgid="1" source="../tsx/basic.tsx"/>
+ <tileset firstgid="211" source="../tsx/Objects.tsx"/>
  <layer id="1" name="Tile Layer 1" width="52" height="50" offsetx="0" offsety="12">
   <data encoding="csv">
 5,5,6,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,
@@ -28,7 +29,7 @@
 15,42,16,42,42,11,105,13,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,21,23,42,42,42,42,42,42,42,42,42,11,13,45,42,42,42,104,102,102,102,102,102,78,78,106,
 15,42,16,42,42,11,105,13,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,11,13,45,42,42,42,104,102,102,102,102,102,78,78,106,
 25,25,26,42,42,11,105,13,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,11,13,45,42,42,42,104,102,102,102,102,102,78,78,106,
-15,15,15,42,42,11,105,13,42,42,42,1,2,2,2,2,2,2,2,2,2,3,42,42,1,2,3,42,42,1,2,2,2,2,2,2,2,75,71,45,42,42,42,104,102,102,102,102,102,78,78,106,
+15,15,15,42,42,11,105,13,42,42,42,1,2,2,2,2,2,2,2,2,2,3,42,42,1,2,3,42,42,1,2,2,2,2,2,2,2,75,71,45,42,42,42,104,102,102,12,102,102,78,78,106,
 5,5,6,42,42,21,22,23,42,42,42,11,75,75,75,75,75,75,75,75,75,13,42,42,11,72,13,42,42,11,61,22,22,22,62,62,62,62,23,45,42,94,95,113,102,102,102,102,102,78,78,106,
 15,42,16,42,42,42,42,42,42,42,42,11,61,22,22,22,22,22,22,62,63,13,42,42,21,22,23,42,42,11,13,42,42,42,42,42,42,42,42,45,42,104,102,102,102,102,102,102,102,78,78,106,
 15,42,16,42,42,42,42,42,42,42,42,11,13,42,42,42,42,42,42,42,73,13,42,42,42,42,42,42,42,11,13,42,1610612769,1610612779,1610612779,1610612779,1610612779,1610612779,1610612779,1610612789,42,104,102,102,102,102,102,102,102,78,78,106,
@@ -55,4 +56,60 @@
 195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195
 </data>
  </layer>
+ <objectgroup id="2" name="Objects">
+  <object id="1" name="palm" type="tree" gid="211" x="1824" y="2496" width="128" height="192"/>
+  <object id="2" name="palm" type="tree" gid="211" x="556" y="2696" width="128" height="192"/>
+  <object id="3" name="palm" type="tree" gid="222" x="1212" y="2660" width="128" height="192"/>
+  <object id="4" name="Pine" type="Tree" gid="214" x="384" y="2056" width="64" height="128"/>
+  <object id="5" name="Pine" type="Tree" gid="214" x="516" y="1036" width="64" height="128"/>
+  <object id="6" name="Pine" type="Tree" gid="214" x="1604" y="1724" width="64" height="128"/>
+  <object id="7" name="Pine" type="Tree" gid="214" x="1212" y="1284" width="64" height="128"/>
+  <object id="8" name="Pine" type="Tree" gid="214" x="956" y="396" width="64" height="128"/>
+  <object id="16" name="rock" type="rock" gid="213" x="2986" y="2518" width="60" height="60"/>
+  <object id="18" name="rock" type="rock" gid="213" x="3150" y="1550" width="60" height="60"/>
+  <object id="19" name="rock" type="rock" gid="213" x="3202" y="2102" width="60" height="60"/>
+  <object id="20" name="rock" type="rock" gid="213" x="2870" y="1494" width="60" height="60"/>
+  <object id="21" name="large rock" type="rock" gid="220" x="2880" y="1640" width="128" height="128"/>
+  <object id="22" name="trunk" type="tree" gid="215" x="2908" y="1524" width="128" height="192"/>
+  <object id="24" name="rock" type="rock" gid="213" x="3094" y="2474" width="60" height="60"/>
+  <object id="26" name="rock" type="rock" gid="213" x="1298" y="2668" width="60" height="60"/>
+  <object id="27" name="rock" type="rock" gid="213" x="1182" y="2684" width="60" height="60"/>
+  <object id="28" name="rock" type="rock" gid="213" x="1846" y="2540" width="60" height="60"/>
+  <object id="30" name="rock" type="rock" gid="213" x="542" y="2720" width="60" height="60"/>
+  <object id="31" name="rock" type="rock" gid="213" x="648" y="2698" width="60" height="60"/>
+  <object id="45" name="wide pine" gid="212" x="1564" y="688" width="128" height="192"/>
+  <object id="46" name="Bushy" type="Tree" gid="212" x="264" y="608" width="128" height="192"/>
+  <object id="47" name="Bushy" type="Tree" gid="218" x="888" y="1540" width="128" height="192"/>
+  <object id="48" name="Bushy" type="Tree" gid="218" x="972" y="2144" width="128" height="192"/>
+  <object id="49" name="Bushy" type="Tree" gid="218" x="2148" y="1532" width="128" height="192"/>
+  <object id="50" name="Bushy" type="Tree" gid="218" x="1868" y="248" width="128" height="192"/>
+  <object id="51" name="marble ruin" type="ruins" gid="216" x="896" y="764" width="64" height="168"/>
+  <object id="52" name="marble ruin" type="ruins" gid="216" x="1360" y="764" width="64" height="168"/>
+  <object id="55" name="marble" type="ruins" gid="221" x="764" y="760" width="64" height="168"/>
+  <object id="56" gid="221" x="1516" y="760" width="64" height="168"/>
+  <object id="57" name="marble " type="ruins" gid="221" x="832" y="1112" width="64" height="168"/>
+  <object id="58" name="marble ruin" type="ruins" gid="217" x="1416" y="964" width="64" height="168"/>
+  <object id="59" name="marble" type="ruins" gid="221" x="376" y="1568" width="64" height="168"/>
+  <object id="60" name="marble ruin" type="ruins" gid="217" x="1536" y="288" width="64" height="168"/>
+  <object id="61" name="marble ruin" type="ruins" gid="216" x="532" y="616" width="64" height="168"/>
+  <object id="62" name="large rock" type="rock" gid="220" x="840" y="944" width="128" height="128"/>
+  <object id="63" name="rock" type="rock" gid="213" x="402" y="1410" width="60" height="60"/>
+  <object id="64" name="rock" type="rock" gid="213" x="370" y="1630" width="60" height="60"/>
+  <object id="65" name="rock" type="rock" gid="213" x="1550" y="1154" width="60" height="60"/>
+  <object id="66" name="grass rock" type="rock" gid="219" x="898" y="2190" width="60" height="60"/>
+  <object id="67" name="grass rock" type="rock" gid="219" x="1174" y="2226" width="60" height="60"/>
+  <object id="68" name="grass rock" type="rock" gid="219" x="258" y="2170" width="60" height="60"/>
+  <object id="69" name="grass rock" type="rock" gid="219" x="1042" y="1486" width="60" height="60"/>
+  <object id="70" name="grass rock" type="rock" gid="219" x="1766" y="1882" width="60" height="60"/>
+  <object id="71" name="grass rock" type="rock" gid="219" x="2114" y="1570" width="60" height="60"/>
+  <object id="72" name="grass rock" type="rock" gid="219" x="802" y="330" width="60" height="60"/>
+  <object id="73" name="grass rock" type="rock" gid="219" x="898" y="214" width="60" height="60"/>
+  <object id="74" name="grass rock" type="rock" gid="219" x="1122" y="442" width="60" height="60"/>
+  <object id="75" name="grass rock" type="rock" gid="219" x="238" y="722" width="60" height="60"/>
+  <object id="76" name="grass rock" type="rock" gid="219" x="2054" y="246" width="60" height="60"/>
+  <object id="77" name="grass rock" type="rock" gid="219" x="2106" y="122" width="60" height="60"/>
+  <object id="78" name="grass rock" type="rock" gid="219" x="1770" y="294" width="60" height="60"/>
+  <object id="79" name="Pine" type="Tree" gid="214" x="2368" y="2312" width="64" height="128"/>
+  <object id="80" name="grass rock" type="rock" gid="219" x="2282" y="2298" width="60" height="60"/>
+ </objectgroup>
 </map>
