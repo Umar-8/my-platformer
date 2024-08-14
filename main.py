@@ -2,8 +2,7 @@ from settings import *
 from player import Player
 from pytmx.util_pygame import load_pygame
 from sprites import *
-from random import randint
-
+from groups import AllSprites
 class Game:
     def __init__(self) -> None:
         # initializing game
@@ -14,7 +13,7 @@ class Game:
         self.running = True
 
         # groups
-        self.all_sprites = pygame.sprite.Group()
+        self.all_sprites = AllSprites()
         self.collisions_sprites = pygame.sprite.Group()
 
         self.setup()
@@ -31,6 +30,9 @@ class Game:
         for obj in map.get_layer_by_name('Objects'):
             CollisionSprite((obj.x, obj.y), obj.image, (self.all_sprites, self.collisions_sprites))
 
+        for obj in map.get_layer_by_name('Collisions'):
+            CollisionSprite((obj.x, obj.y), pygame.Surface((obj.width, obj.height)), self.collisions_sprites)
+
 
 
     def run(self):
@@ -43,7 +45,7 @@ class Game:
 
             # prevent last frames from getting seen
             self.display_surface.fill("black")
-            self.all_sprites.draw(self.display_surface)
+            self.all_sprites.draw(self.player.rect.center)
             pygame.display.update()
 
         pygame.quit()
