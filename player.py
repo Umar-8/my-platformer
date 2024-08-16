@@ -11,6 +11,13 @@ class Player(pygame.sprite.Sprite):
         self.speed = 500
         self.collision_sprites = collision_sprites
 
+    def load_images(self):
+        self.frames = {'left': [],
+                       'right': [],
+                       'up': [],
+                       'down': []
+                       }
+
     def move(self, dt):
         self.hitbox_rect.x += self.direction.x * self.speed * dt
         self.collision('horizontal')
