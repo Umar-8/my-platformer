@@ -61,7 +61,7 @@ class Player(pygame.sprite.Sprite):
                         self.hitbox_rect.bottom = sprite.rect.top
 
     def animate(self, dt):
-        self.frame_index += 5 * dt
+        self.frame_index = self.frame_index + 5 * dt if self.direction else 0
         self.image = self.frames[self.state][int(self.frame_index) % len(self.frames[self.state])]
         if self.direction.x != 0:
             self.state = 'right' if self.direction.x > 0 else 'left'
