@@ -10,7 +10,7 @@ class Player(pygame.sprite.Sprite):
         self.hitbox_rect = self.rect.inflate(-60, -100)
         # movement
         self.direction = pygame.Vector2(0, 0)
-        self.speed = 500
+        self.speed = 350
         self.collision_sprites = collision_sprites
 
     def load_images(self):
@@ -38,8 +38,8 @@ class Player(pygame.sprite.Sprite):
 
     def input(self):
         keys = pygame.key.get_pressed()
-        self.direction.x = int(keys[pygame.K_RIGHT]) - int(keys[pygame.K_LEFT])
-        self.direction.y = int(keys[pygame.K_DOWN]) - int(keys[pygame.K_UP])
+        self.direction.x = int(keys[pygame.K_RIGHT] or keys[pygame.K_d]) - int(keys[pygame.K_LEFT] or keys[pygame.K_a])
+        self.direction.y = int(keys[pygame.K_DOWN] or keys[pygame.K_s]) - int(keys[pygame.K_UP] or keys[pygame.K_w])
         # normalizing for diagonal movement
         if self.direction:
             self.direction = self.direction.normalize()
