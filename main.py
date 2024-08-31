@@ -3,6 +3,8 @@ from player import Player
 from pytmx.util_pygame import load_pygame
 from sprites import *
 from groups import AllSprites
+from random import choice
+
 class Game:
     def __init__(self) -> None:
         # initializing game
@@ -11,22 +13,38 @@ class Game:
         # add game title here
         self.clock = pygame.time.Clock()
         self.running = True
-        self.load_images()
 
         # groups
         self.all_sprites = AllSprites()
         self.collisions_sprites = pygame.sprite.Group()
         self.bullet_sprites = pygame.sprite.Group()
+        self.enemy_sprites = pygame.sprite.Group()
 
-        self.setup()
 
         # timer
         self.can_shoot = True
         self.shoot_time = 0
         self.gun_cooldown = 100
 
+        self.enemy_event = pygame.event.custom_type()
+        pygame.time.set_timer(self.enemy_event, 300)
+        self.spawn_positions = []
+
+        self.load_images()
+        self.setup()
+
     def load_images(self):
         self.bullet_surf = pygame.image.load(join('images', 'weapons', 'bullet', 'bullet.png')).convert_alpha()
+
+        folder = walk(join('images', 'enemies', 'bat'))
+        self.enemy_frames = []
+        for path, folders, file_names in folder:
+            if file_names:
+                for file_name in sorted(file_names, key=lambda name: int(name.split('.')[0])):
+                    full_path = join(path, file_name)
+                    surf = pygame.image.load(full_path).convert_alpha()
+                    self.enemy_frames.append(surf)
+
 
     def input(self):
         if pygame.mouse.get_pressed()[0] and self.can_shoot:
@@ -50,6 +68,9 @@ class Game:
             if obj.name == 'Player':
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites)
                 self.gun = Gun(self.player, self.all_sprites)
+            # adding enemy markers positions from tiled
+            else:
+                self.spawn_positions.append((obj.x, obj.y))
 
 
     def gun_timer(self):
@@ -64,6 +85,9 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
+                if event.type == self.enemy_event:
+                    Enemy(choice(self.spawn_positions), self.enemy_frames, (self.all_sprites, self.enemy_sprites), self.player, self.collisions_sprites)
+
             self.all_sprites.update(dt)
 
             self.gun_timer()
