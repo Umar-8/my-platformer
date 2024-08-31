@@ -27,7 +27,7 @@ class Game:
         self.gun_cooldown = 100
 
         self.enemy_event = pygame.event.custom_type()
-        pygame.time.set_timer(self.enemy_event, 300)
+        pygame.time.set_timer(self.enemy_event, 800)
         self.spawn_positions = []
 
         self.load_images()
@@ -79,6 +79,20 @@ class Game:
             if current_time - self.shoot_time >= self.gun_cooldown:
                 self.can_shoot = True
 
+    def bullet_collision(self):
+        if self.bullet_sprites:
+            for bullet in self.bullet_sprites:
+                collision_sprites = pygame.sprite.spritecollide(bullet, self.enemy_sprites, False, pygame.sprite.collide_mask)
+                if collision_sprites:
+                    for sprite in collision_sprites:
+                        sprite.destroy()
+                    bullet.kill()
+
+    def player_collision(self):
+        if pygame.sprite.spritecollide(self.player, self.enemy_sprites, False, pygame.sprite.collide_mask):
+            self.running = False
+
+
     def run(self):
         while self.running:
             dt = self.clock.tick() / 1000 # dt in ms
@@ -93,11 +107,14 @@ class Game:
             self.gun_timer()
             self.input()
             self.all_sprites.update(dt)
+            self.bullet_collision()
+            self.player_collision()
 
             # prevent last frames from getting seen
             self.display_surface.fill("black")
             self.all_sprites.draw(self.player.rect.center)
             pygame.display.update()
+
 
         pygame.quit()
 
